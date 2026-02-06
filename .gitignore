@@ -1,0 +1,83 @@
+# ========================
+# Environment & Secrets
+# ========================
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# ========================
+# Dependencies
+# ========================
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# ========================
+# IDE & Editor
+# ========================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ========================
+# OS Files
+# ========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========================
+# Build & Output
+# ========================
+build/
+dist/
+*.log
+
+# ========================
+# Testing & Coverage
+# ========================
+coverage/
+.pytest_cache/
+htmlcov/
+.nyc_output/
+
+# ========================
+# Flutter / Dart
+# ========================
+mobile/.dart_tool/
+mobile/.packages
+mobile/.flutter-plugins
+mobile/.flutter-plugins-dependencies
+mobile/build/
+mobile/.pub-cache/
+mobile/ios/Pods/
+mobile/ios/.symlinks/
+mobile/android/.gradle/
+mobile/android/local.properties
+mobile/.metadata
+
+# ========================
+# Docker
+# ========================
+docker-compose.override.yml
+
+# ========================
+# AI Models Cache
+# ========================
+whisper_cache/
+*.pt
+*.bin
+
+# ========================
+# Misc
+# ========================
+setup-docker.sh
