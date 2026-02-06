@@ -36,7 +36,7 @@ class ChallengeBloc extends Bloc<ChallengeEvent, ChallengeState> {
     result.fold(
       (failure) => emit(ChallengeError(failure.message)),
       (response) {
-        final correct = response['correct'] as bool? ?? false;
+        final correct = response['isCorrect'] as bool? ?? false;
         final xp = response['xp'] as int? ?? currentState.xp;
         final hearts = response['hearts'] as int? ?? currentState.hearts;
         if (correct) _correctAnswers++;

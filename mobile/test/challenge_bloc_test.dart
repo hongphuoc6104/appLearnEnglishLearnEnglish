@@ -73,7 +73,7 @@ void main() {
       'updates state with correct answer result',
       build: () {
         when(() => mockSubmitAnswerUseCase('c1', 'Xin chao'))
-            .thenAnswer((_) async => const Right({'correct': true, 'xp': 10, 'hearts': 5}));
+            .thenAnswer((_) async => const Right({'isCorrect': true, 'xp': 10, 'hearts': 5}));
         return challengeBloc;
       },
       seed: () => ChallengeLoaded(challenges: testChallenges),
@@ -87,7 +87,7 @@ void main() {
       'updates state with wrong answer result',
       build: () {
         when(() => mockSubmitAnswerUseCase('c1', 'Tam biet'))
-            .thenAnswer((_) async => const Right({'correct': false, 'xp': 0, 'hearts': 4}));
+            .thenAnswer((_) async => const Right({'isCorrect': false, 'xp': 0, 'hearts': 4}));
         return challengeBloc;
       },
       seed: () => ChallengeLoaded(challenges: testChallenges),
