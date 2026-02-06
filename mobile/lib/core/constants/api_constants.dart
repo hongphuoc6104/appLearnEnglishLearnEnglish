@@ -1,6 +1,16 @@
+import 'package:flutter/foundation.dart';
+
 class ApiConstants {
-  static const String baseUrl = 'http://10.0.2.2:3000/api';
-  static const String aiBaseUrl = 'http://10.0.2.2:8000';
+  static String get baseUrl {
+    if (kIsWeb) return 'http://localhost:3000/api';
+    return 'http://10.0.2.2:3000/api';
+  }
+
+  static String get aiBaseUrl {
+    if (kIsWeb) return 'http://localhost:8000';
+    return 'http://10.0.2.2:8000';
+  }
+
   static const String login = '/auth/login';
   static const String register = '/auth/register';
   static const String profile = '/auth/profile';
